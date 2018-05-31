@@ -1,0 +1,14 @@
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.csproj.CoreCompileInputs.cache
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.AssemblyInfoInputs.cache
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.AssemblyInfo.cs
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\PPTGenerator.deps.json
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\PPTGenerator.runtimeconfig.json
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\PPTGenerator.runtimeconfig.dev.json
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\PPTGenerator.dll
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\PPTGenerator.pdb
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\Microsoft.Office.Interop.PowerPoint.dll
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\bin\Debug\netcoreapp2.0\Office.dll
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.csproj.CopyComplete
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.dll
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.pdb
+D:\lyf\study\CShap\PPTGenerator\PPTGenerator\obj\Debug\netcoreapp2.0\PPTGenerator.csprojAssemblyReference.cache

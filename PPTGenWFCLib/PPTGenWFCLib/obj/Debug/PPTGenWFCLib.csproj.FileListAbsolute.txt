@@ -1,0 +1,9 @@
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\bin\Debug\PPTGenWFCLib.dll
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\bin\Debug\PPTGenWFCLib.pdb
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.csprojAssemblyReference.cache
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.UserControl1.resources
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.csproj.GenerateResource.cache
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.csproj.CoreCompileInputs.cache
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.dll
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\obj\Debug\PPTGenWFCLib.pdb
+D:\lyf\study\CShap\PPTGenWFCLib\PPTGenWFCLib\bin\Debug\PPTGenWFCLib.tlb
