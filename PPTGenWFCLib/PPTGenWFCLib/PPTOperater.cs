@@ -22,7 +22,7 @@ namespace PPTGenerator
         #endregion
 
         #region 文件打开保存关闭操作
-        public void TTPOpen(string filePath)
+        public void Open(string filePath)
         {
             //防止连续打开多个PPT程序.
             if (this.m_PptApp != null) { return; }
@@ -39,10 +39,10 @@ namespace PPTGenerator
                 m_PptApp = null;
             }
         }
-        public void PPTCreate(string filePath)
+        public void Create(string filePath)
         {
             string folderPath = filePath.Substring(0, filePath.LastIndexOf('/'));
-            if(!Directory.Exists(folderPath))
+            if (!Directory.Exists(folderPath))
             {
                 return;
             }
@@ -51,13 +51,13 @@ namespace PPTGenerator
             m_CurTargetFilePath = filePath;
             //bAssistantOn = m_PptApp.Assistant.On;
             //m_PptApp.Assistant.On = false;
-            if(File.Exists(m_CurTargetFilePath))
+            if (File.Exists(m_CurTargetFilePath))
             {
                 File.Delete(m_CurTargetFilePath);
             }
         }
 
-        public void PPTSave(string filePath)
+        public void Save(string filePath)
         {
             try
             {
@@ -77,17 +77,17 @@ namespace PPTGenerator
                     m_PptPresSet.SaveAs(filePath, format, Microsoft.Office.Core.MsoTriState.msoFalse);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public void PPTClose(bool isSave)
+        public void Close(bool isSave)
         {
-            if(m_PptPresSet != null)
+            if (m_PptPresSet != null)
             {
-                if(isSave && m_CurTargetFilePath != null)
-                    PPTSave(m_CurTargetFilePath);
+                if (isSave && m_CurTargetFilePath != null)
+                    Save(m_CurTargetFilePath);
                 m_PptPresSet.Close();
             }
             if (m_PptApp != null)
@@ -102,7 +102,7 @@ namespace PPTGenerator
         }
         public void AddSlide(int index, POWERPOINT.PpSlideLayout layout)
         {
-            if(m_PptPresSet!=null)
+            if (m_PptPresSet != null)
                 m_CurSlide = m_PptPresSet.Slides.Add(index, layout);
         }
 
@@ -110,7 +110,7 @@ namespace PPTGenerator
         {
             POWERPOINT.TextRange myTextRng = null;
 
-            if(m_CurSlide == null)
+            if (m_CurSlide == null)
             {
                 AddSlide(POWERPOINT.PpSlideLayout.ppLayoutTitleOnly);
             }
@@ -130,7 +130,7 @@ namespace PPTGenerator
             for (int i = 0; i < words.Length; ++i)
             {
                 POWERPOINT.Shape s = m_CurSlide.Shapes.AddTextbox(OFFICECORE.MsoTextOrientation.msoTextOrientationHorizontal, 20f, 120f + i * 50f, 500f, 50f);
-                if (s!= null && s.Type == MsoShapeType.msoTextBox)
+                if (s != null && s.Type == MsoShapeType.msoTextBox)
                 {
                     myTextRng = s.TextFrame.TextRange;
                     myTextRng.Font.NameFarEast = "微软雅黑";
@@ -203,11 +203,11 @@ namespace PPTGenerator
         /// <returns>设置成功与否</returns>
         public bool ChangeContent(int sindex, int windex, string word)
         {
-            if(sindex <= 0 || windex <= 0)
+            if (sindex <= 0 || windex <= 0)
             {
                 return false;
             }
-            if(GoToSlide(sindex))
+            if (GoToSlide(sindex))
             {
                 try
                 {
@@ -264,7 +264,7 @@ namespace PPTGenerator
             AddSlide(POWERPOINT.PpSlideLayout.ppLayoutVerticalTitleAndText);
             m_CurSlide.Shapes.AddPicture(imgpath, MsoTriState.msoFalse, MsoTriState.msoCTrue, x, y, width, heigh);
         }
-        public bool InsertImg(int sindex, string imgpath,float x,float y,float width, float heigh)
+        public bool InsertImg(int sindex, string imgpath, float x, float y, float width, float heigh)
         {
             try
             {
@@ -332,7 +332,7 @@ namespace PPTGenerator
                 if (GoToSlide(sindex))
                 {
                     List<POWERPOINT.Shape> _shapList = new List<POWERPOINT.Shape>();
-                    for(int i= 1; i <= m_CurSlide.Shapes.Count; ++i)
+                    for (int i = 1; i <= m_CurSlide.Shapes.Count; ++i)
                     {
                         POWERPOINT.Shape s = m_CurSlide.Shapes[i];
                         if (s != null && s.Type == MsoShapeType.msoPicture)
@@ -342,7 +342,7 @@ namespace PPTGenerator
                     }
                     if (_shapList.Count >= imgIndex && imgIndex > 0)
                     {
-                        POWERPOINT.Shape s = _shapList[imgIndex-1];
+                        POWERPOINT.Shape s = _shapList[imgIndex - 1];
                         if (s != null && s.Type == MsoShapeType.msoPicture)
                         {
                             //POWERPOINT.TextFrame pic = s.Width;

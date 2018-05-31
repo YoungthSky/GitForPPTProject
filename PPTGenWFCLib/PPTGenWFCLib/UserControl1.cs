@@ -15,7 +15,7 @@ namespace PPTGenWFCLib
     using System.Runtime.InteropServices;
 
     [Guid("2BEDB263-AD77-419E-84E2-0355477A3CF3"), ProgId("PPTGenWFCLib.UserControl1"), ComVisible(true)]
-    public partial class UserControl1: UserControl,IObjectSafety
+    public partial class UserControl1 : UserControl, IObjectSafety
     {
         public UserControl1()
         {
@@ -25,18 +25,18 @@ namespace PPTGenWFCLib
         private void button1_Click(object sender, EventArgs e)
         {
             string orgfile = this.textBox1.Text.Trim();
-            PPTOperater popt = new PPTOperater();
-            popt.TTPOpen(orgfile);
-            popt.AddImg("D:\\lyf\\mount.jpg", 0, 0, 250, 200);
-            popt.AddWords("hello world", new string[] { "江南水乡美如画", "借问酒家何处有", "牧童遥指杏花村" });
-            popt.AddSlide("hello china", new string[] { "塞外风光", "大漠孤烟直", "长河落日圆" });
+            PPTOperater operater = new PPTOperater();
+            operater.Open(orgfile);
+            operater.AddImg("D:\\lyf\\mount.jpg", 0, 0, 250, 200);
+            operater.AddWords("hello world", new string[] { "江南水乡美如画", "借问酒家何处有", "牧童遥指杏花村" });
+            operater.AddSlide("hello china", new string[] { "塞外风光", "大漠孤烟直", "长河落日圆" });
             //popt.ChangeTittle(1, "厉害了我的锅");
-            popt.ChangeContent(2, 3, "美好世界！！");
+            operater.ChangeContent(2, 3, "美好世界！！");
 
             //popt.InsertImg(1,"D:\\lyf\\mount.jpg", 0, 200, 250, 200);
-            popt.ExchangeImg(1, "D:\\lyf\\sea.jpg");
-            popt.PPTSave("D:/lyf/world0.ppt");
-            popt.PPTClose(false);
+            operater.ExchangeImg(1, "D:\\lyf\\sea.jpg");
+            operater.Save("D:/lyf/world0.ppt");
+            operater.Close(false);
 
             MessageBox.Show("Click");
         }
