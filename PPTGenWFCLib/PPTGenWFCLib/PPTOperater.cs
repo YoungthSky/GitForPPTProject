@@ -10,14 +10,14 @@ namespace PPTGenerator
     public class PPTOperater
     {
         #region ppt操作对象信息
-        POWERPOINT.Application m_PptApp;
-        POWERPOINT.Presentation m_PptPresSet;
+        POWERPOINT.Application m_PptApp;//PPT的操作程序
+        POWERPOINT.Presentation m_PptPresSet;//当前打开的PPT
         //POWERPOINT.SlideShowSettings m_PptSSS;
-        bool bAssistantOn;
+        //bool bAssistantOn;
 
         POWERPOINT.Slide m_CurSlide = null;        //PPT中的幻灯片
 
-        private string m_CurTargetFilePath = null;
+        private string m_CurTargetFilePath = null;//当前打开PPT的路径
         private int m_SlideCount = 1;
         #endregion
 
