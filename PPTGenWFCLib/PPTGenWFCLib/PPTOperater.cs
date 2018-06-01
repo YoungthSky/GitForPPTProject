@@ -4,6 +4,7 @@ using Microsoft.Office.Core;
 using OFFICECORE = Microsoft.Office.Core;
 using POWERPOINT = Microsoft.Office.Interop.PowerPoint;
 using System.IO;
+using System.Windows.Forms;
 
 namespace PPTGenerator
 {
@@ -25,7 +26,11 @@ namespace PPTGenerator
         public void Open(string filePath)
         {
             //防止连续打开多个PPT程序.
-            if (this.m_PptApp != null) { return; }
+            if (this.m_PptApp != null)
+            {
+                MessageBox.Show("已打开过此程序，重复创建PPTApp!");
+                return;
+            }
             try
             {
                 m_PptApp = new POWERPOINT.Application();
@@ -44,6 +49,7 @@ namespace PPTGenerator
             string folderPath = filePath.Substring(0, filePath.LastIndexOf('/'));
             if (!Directory.Exists(folderPath))
             {
+                MessageBox.Show("文件夹不存在!");
                 return;
             }
             m_PptApp = new POWERPOINT.Application();
@@ -53,6 +59,7 @@ namespace PPTGenerator
             //m_PptApp.Assistant.On = false;
             if (File.Exists(m_CurTargetFilePath))
             {
+                MessageBox.Show("文件已存在!");
                 File.Delete(m_CurTargetFilePath);
             }
         }
